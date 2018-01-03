@@ -1,0 +1,28 @@
+{
+	"name": "simple-protractor-example",
+	"version": "0.1.0-1",
+	"description": "A really simple protractor example...",
+	"scripts": {
+		"update": "node_modules/.bin/webdriver-manager update",
+		"test": "protractor conf.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ppasler/simple-protractor-example.git"
+	},
+	"keywords": [
+		"protractor",
+		"webdriver"
+	],
+	"author": "ppasler",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ppasler/simple-protractor-example/issues"
+	},
+	"homepage": "https://github.com/ppasler/simple-protractor-example",
+	"dependencies": {
+		"protractor": "5.1.2",
+		"selenium-standalone": "^6.5.0",
+		"jasmine-spec-reporter": "^2.4.0"
+	}
+}
