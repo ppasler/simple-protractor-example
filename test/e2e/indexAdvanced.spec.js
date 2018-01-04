@@ -1,4 +1,4 @@
-var IndexPage = require('./../page/IndexPage');
+var IndexPage = require('./page-objects/IndexPage');
 
 describe('IndexPage (with page object)', function () {
 

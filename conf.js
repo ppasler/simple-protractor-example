@@ -4,7 +4,7 @@ var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 exports.config = {
 	directConnect: true,
 
-	specs: ['spec/*.spec.js'],
+	specs: ['test/e2e/*.spec.js'],
 	baseUrl: 'file://' + __dirname + '/data/', // absolute path to html files
 	framework: 'jasmine',
 
