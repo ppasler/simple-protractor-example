@@ -1,3 +1,6 @@
+var SpecReporter = require('jasmine-spec-reporter');
+var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+
 exports.config = {
 	directConnect: true,
 
@@ -11,8 +14,14 @@ exports.config = {
 		browser.manage().window().setSize(1024, 800);
 
 		// better jasmine 2 reports...
-		var SpecReporter = require('jasmine-spec-reporter');
 		jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'spec'}));
+		jasmine.getEnv().addReporter(new HtmlScreenshotReporter({
+			// captureOnlyFailedSpecs: true,
+			dest: 'screenshots',
+			pathBuilder: function(currentSpec, suites, browserCapabilities) {
+				return currentSpec.fullName;
+			}
+		}));
 	},
 
 	capabilities: {
