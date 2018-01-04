@@ -1,4 +1,4 @@
-describe('index page simple', function () {
+describe('IndexPage (simple)', function () {
 
 	it('has headline', function () {
 		// open page '`baseUrl` + index.html' from `conf.js`
