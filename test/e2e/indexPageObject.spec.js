@@ -8,33 +8,11 @@ describe('IndexPage (page object)', function () {
 		indexPage.open();
 	});
 
-	describe('ToDo List', function () {
-		var toDoList = indexPage.toDoList;
+	it('has headline', function () {
+		// get element by type
+		var headline = element(by.css("h1"));
 
-		it('has list', function () {
-			var listContainer = toDoList.getToDoContainer();
-
-			expect(listContainer.isDisplayed()).toBeTruthy();
-		});
-
-		describe('"Buy Food" item', function () {
-			var itemName = 'buy food';
-
-			it('has item', function () {
-				var buyFoodItem = toDoList.getItemByText(itemName);
-
-				expect(buyFoodItem.isDisplayed()).toBeTruthy();
-			});
-
-			it('is unchecked', function () {
-				expect(toDoList.isItemChecked(itemName)).toBeFalsy();
-			});
-
-			it('checks item', function () {
-				toDoList.checkItem(itemName);
-
-				expect(toDoList.isItemChecked(itemName)).toBeTruthy();
-			});
-		});
+		// check if headline has the expected text
+		expect(headline.getText()).toBe("Simple Protractor Example");
 	});
 });

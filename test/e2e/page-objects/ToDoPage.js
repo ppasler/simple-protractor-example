@@ -2,13 +2,18 @@
 var ToDoList = function () {
 	var self = this;
 
+	this.open = function () {
+		browser.get("todo.html", 1000);
+	};
+
 	this.getToDoContainer = function() {
 		return element(by.id("toDo"));
 	};
 
 	this.getItemByText = function(text) {
 		return self.getToDoContainer()
-			.element(by.cssContainingText("li", text)) // no exact match required
+			.element(by.cssContainingText("span", text)) // no exact match required
+			.element(by.xpath(".."))
 			.element(by.css('input'));
 	};
 

@@ -1,4 +1,4 @@
-var SpecReporter = require('jasmine-spec-reporter');
+var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 
 exports.config = {
@@ -18,6 +18,7 @@ exports.config = {
 		jasmine.getEnv().addReporter(new HtmlScreenshotReporter({
 			// captureOnlyFailedSpecs: true,
 			dest: 'screenshots',
+			ignoreSkippedSpecs: false,
 			pathBuilder: function(currentSpec, suites, browserCapabilities) {
 				return currentSpec.fullName;
 			}
