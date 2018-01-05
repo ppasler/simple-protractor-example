@@ -1,11 +1,7 @@
-var IndexPage = require('./page-objects/IndexPage');
-
-describe('IndexPage (with page object)', function () {
-
-	var indexPage = new IndexPage();
+describe('IndexPage (advanced)', function () {
 
 	beforeAll(function () {
-		indexPage.open();
+		browser.get("index.html", 1000);
 	});
 
 	it('has headline', function () {
