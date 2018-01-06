@@ -1,6 +1,7 @@
 # Simple Protractor Example
 
-Easy to setup and run Protractor example, with simple html page and small test cases.  
+Project to learn [Protractor](http://www.protractortest.org) by example. 
+A really simple minimal working example and an extended one, helps you learn it step by step.
 
 ## Setup
 * Install [Node](http://nodejs.org) (v6.x.x or later)
@@ -9,22 +10,31 @@ Easy to setup and run Protractor example, with simple html page and small test c
 * Update Webdriver `npm run update`
 
 ## Run Tests
-* `npm test`
+* `npm run test-e2e` or
+* `npm run test-e2e-todo`
 
 ## Structure
-The `data/` folder contains a simple html and css file with static content.
+The root directory contains the `package.json`. The [package.json](https://docs.npmjs.com/files/package.json) is needed to install the required node packages and 
+inherits the configuration for two scripts that you might have read in the previous section (`npm run update` and `test-e2e`).
 
-`test/e2e/` contains the spec files and page objects. 
+Then there is a minimal working example within the `index/` folder and an extended one under `todo/`.
+Both folders contain a HTML file, two specs and a page object.
 
-There are three spec files:
-* `index.spec.js` contains the smallest test setup with only one test case.
-* `toDo.spec.js` has some more tests with different ways to choose an element.
-* `toDoPageObject.spec.js` uses page objects to wrap some functionality.
+### Index
+The `index/conf.js` inherits the minimal working configuration for protractor to run.
+ 
+`index.html` is a simple HTML file without any special elements.
+The `index.spec.js` contains the smallest test setup with only one test case. 
+The `indexPageObject.spec.js` does the same but uses a really simple page object to open the page.
 
-The `IndexPage.js` is a simple wrapper for the page itself and its elements (the todo list in this case)
+### ToDo
+The `todo/conf.js` extends the configuration with a better reporter, screenshots and further arguments to chrome.
 
-After running `npm install` you'll find `node_modules` folder (as you surely know). 
-After `npm test` there will be a `screenshots` folder containing one image for each test case.
+The ToDo page (`todo.html`) uses an Angular example from [W3Schools](https://www.w3schools.com/angular/tryit.asp?filename=try_ng_todo_app). 
+The `toDo.spec.js` uses different ways to select an element. 
+`toDoPageObject.spec.js` uses page objects to wrap some functionality.
+
+After `npm run test-e2e-todo` there will be a `screenshots` folder containing one image for each test case.
 
 ## Credits
 

@@ -32,5 +32,11 @@ describe('ToDoPage (page object)', function () {
 
 			expect(toDoPage.isItemChecked(itemName)).toBeTruthy();
 		});
+
+		it('unchecks item', function () {
+			toDoPage.uncheckItem(itemName);
+
+			expect(toDoPage.isItemChecked(itemName)).toBeFalsy();
+		});
 	});
 });

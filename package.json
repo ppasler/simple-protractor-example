@@ -4,7 +4,8 @@
 	"description": "A really simple protractor example...",
 	"scripts": {
 		"update": "node_modules/.bin/webdriver-manager update",
-		"test": "protractor conf.js"
+		"test-e2e": "protractor index/conf.js",
+		"test-e2e-todo": "protractor todo/conf.js"
 	},
 	"repository": {
 		"type": "git",

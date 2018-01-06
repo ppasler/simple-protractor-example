@@ -1,3 +1,7 @@
+/**
+ * Simple page object with a wrapper method to call the page itself
+ */
+
 /** @constructor */
 var IndexPage = function () {
 

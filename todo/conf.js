@@ -5,7 +5,7 @@ exports.config = {
 	directConnect: true,
 
 	specs: ['test/e2e/*.spec.js'],
-	baseUrl: 'file://' + __dirname + '/data/', // absolute path to html files
+	baseUrl: 'file://' + __dirname + '/app/', // absolute path to html files
 	framework: 'jasmine',
 
 	onPrepare: function () {
